@@ -1,5 +1,7 @@
 header {
     padding-block: 32px;
+    font: var(--text-md);
+    color: var(--text-color-secondary);
 }
 
 header .container {
@@ -25,9 +27,7 @@ header .container {
 }
 
 #profile p {
-    font: var(--text-md);
-    color: var(--text-color-secondary);
-    margin-bottom: 4px;
+    
 }
 
 #info {
@@ -44,6 +44,4 @@ header .container {
     display: flex;
     align-items: center;
     gap: 8px;
-    font: var(--text-md);
-    color: var(--text-color-secondary);
 }
