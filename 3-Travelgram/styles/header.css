@@ -25,6 +25,7 @@ header .container {
     height: 176px;
     object-fit: cover;
     border-radius: 50%;
+    
 }
 
 #profile h1 {
