@@ -1,0 +1,17 @@
+/* 
+Exemplo da aula: no meu caso substitui pelo codigo abaixo pq não funciona com a versão do VS Code instalada
+
+#featured {
+    img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+} */
+
+#featured img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+
+}
