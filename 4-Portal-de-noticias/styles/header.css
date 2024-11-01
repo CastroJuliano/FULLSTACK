@@ -1,0 +1,44 @@
+#primary {
+    padding-block: 20px;
+    
+    /* OBS: o metodo de nesting não funcionou possivelmente por         
+            problema de versão do VS Code para maquinas mais antigas.
+
+    div {
+        display: flex;                   
+        align-items: center;            
+        gap: 8px;                      
+    }
+    
+     nesting css         
+    div:nth-child(2) {
+        margin-inline: center;
+        margin-inline-start: 30%;
+    } 
+        
+    div:nth-child(3) {
+        justify-self: end;
+    } */
+}
+
+/* Solução para o problema do nesting */
+
+#primary div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#primary div:nth-child(2) {
+    margin-inline: center;
+    margin-inline-start: 30%;
+}
+
+#primary div:nth-child(3) {
+    justify-self: end;
+}
+
+#secondary {
+    padding-block: 14px;
+    border: solid 1px var(--stroke-color);
+    border-inline: none;
+}
