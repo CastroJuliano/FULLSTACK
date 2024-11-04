@@ -45,6 +45,10 @@ figcaption {
 
     padding: 24px;
 
+    &:has(.text-lg) {
+        padding: 12px;
+    }
+
     /* 
     Novamente a solução foi colocar fora do figcaption
     
