@@ -27,4 +27,32 @@ Exemplo da aula: no meu caso substitui pelo codigo abaixo pq não funciona com a
         top: 50%;
         background: linear-gradient(180deg, transparent 0%, #020617 100%);
     }
+
+    /* 
+    Não funcionou desse modo do exemplo por versão do VS Code instalada na máquina. Solução foi colocar fora do card como mostrado abaixo.
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+
+        padding: 24px;
+    } */
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+
+    padding: 24px;
+
+    /* 
+    Novamente a solução foi colocar fora do figcaption
+    
+    h2 {
+        margin-top: 8px;
+    } */
+}
+
+figcaption h2 {
+    margin-top: 8px;
 }
