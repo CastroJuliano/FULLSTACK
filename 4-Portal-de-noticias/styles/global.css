@@ -52,6 +52,8 @@ img {
 
 main {
     margin-top: 40px;
+    /* gap: 80px;  Não funcionou com display block foi colocado margin-top no header do sections.css */
+    padding-inline: 32px;
 }
 
 .content-tag {
