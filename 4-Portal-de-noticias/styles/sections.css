@@ -47,12 +47,18 @@ header span {
 Exemplo da aula: no meu caso substitui pelo codigo abaixo pq não funciona com a versão do VS Code instalada
 
 #featured {
+    grid-area: featured;
+
     img {
         height: 100%;
         object-fit: cover;
         border-radius: 4px;
     }
 } */
+
+#featured {
+    grid-area: featured;
+}
 
 #featured img {
     height: 100%;
@@ -108,6 +114,8 @@ figcaption h2 {
 }
 
 #weekly {
+    grid-area: weekly;
+
     &>div {
         grid-template-columns: repeat(4, 292px);
     }
@@ -147,6 +155,69 @@ figcaption h2 {
 }
 
 #weekly figure p {
+    margin-top: 8px;
+    font-weight: 800;
+}
+
+/* Não funcionou nessa versão. Resolução ficou como no codigo abaixo desse codigo comentado.  
+
+#ai {
+    grid-area: ai;
+
+    img {
+        width: 176px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-block: 8px 4px;
+    }
+}  */
+
+#ai {
+    grid-area: ai;
+}
+
+#ai img {
+    width: 176px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#ai h3 {
+    margin-block: 8px 4px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+/* Não funcionou nessa versão. Resolução ficou como no codigo abaixo desse codigo comentado.
+
+#more {
+    margin-top: 32px;
+
+    h3 {
         margin-top: 8px;
-        font-weight: 800;
+    img {
+        width: 72px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+} */
+
+#more {
+    margin-top: 32px;
+
+}
+
+#more h3 {
+    margin-top: 8px;
+}
+
+#more img {
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
