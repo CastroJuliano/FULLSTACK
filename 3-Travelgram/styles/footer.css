@@ -1,12 +1,33 @@
 footer {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    justify-content: space-between; /* Alinha o primeiro span à esquerda e a div à direita */
     padding-block: 24px;
-
-    font: 14px/150% var(--font-family)
+    font: 14px/150% var(--font-family);
 }
 
+/* Remove a margem automática do primeiro span (não é mais necessária) */
 footer span:nth-child(1) {
-    margin-right: auto;
+    margin-right: 0; /* Corrigido: removido o margin-right: auto */
+}
 
+/* Estilo para a div que contém o segundo e terceiro span */
+footer > div {
+    display: flex;
+    gap: 24px; /* Espaçamento de 24px entre o segundo e terceiro span */
+}
+
+/* Ajustes para mobile */
+@media (max-width: 25.875em) {
+    footer {
+        flex-direction: column; /* Empilha os spans verticalmente */
+        align-items: center; /* Centraliza os spans horizontalmente */
+        gap: 20px; /* Reduz o espaçamento entre os spans */
+    }
+
+    /* Container para o segundo e terceiro span */
+    footer > div {
+        width: 100%; /* Ocupa a largura total do footer */
+        justify-content: space-between; /* Justifica os spans (um à esquerda, outro à direita) */
+    }
 }

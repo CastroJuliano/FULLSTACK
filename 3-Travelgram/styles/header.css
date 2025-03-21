@@ -53,3 +53,35 @@ header .container {
     align-items: center;
     gap: 8px;
 }
+
+@media (width <= 25.875em) {
+
+    & header {
+        padding: 0;
+    }
+
+    & header .container {
+        display: grid;
+        padding-block: 32px;
+    }
+
+    #profile {
+        display: grid;
+    }
+
+    & #profile h1 {
+        --text-lg: bold 24px/125% var(--font-family);
+    }
+
+    & #profile img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        
+    }
+
+    & #info {
+        padding: 0;   
+    }
+}

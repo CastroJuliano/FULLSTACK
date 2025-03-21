@@ -45,3 +45,16 @@ a:hover {
 .bg-surface-color {
     background-color: var(--surface-color);
 }
+
+@media (width <= 25.875em) {
+
+    & .container {
+        display: flex;
+        max-width: 414px;
+    }
+
+    & .desktop-only {
+        display: none;
+    }
+
+}
