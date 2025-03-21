@@ -1,0 +1,26 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 32px;
+
+  /* alterado tamanho das imagens de 286px para 280px para melhor aparência com navegador com tamanho em 100% */
+  & img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+  }
+}
+
+@media (width <= 25.875em) {
+    
+  & main {
+    padding: 16px;
+    gap: 16px;
+    
+    & img {
+      width: 328px;
+      height: 328px;
+    } 
+  }
+}
