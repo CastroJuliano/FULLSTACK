@@ -1,0 +1,103 @@
+#primary {
+    padding-block: 20px;
+    
+    /* OBS: o metodo de nesting não funcionou possivelmente por         
+            problema de versão do VS Code para maquinas mais antigas.
+
+    div {
+        display: flex;                   
+        align-items: center;            
+        gap: 8px;                      
+    }
+    
+     nesting css         
+    div:nth-child(2) {
+        margin-inline: center;
+        margin-inline-start: 30%;
+    } 
+        
+    div:nth-child(3) {
+        justify-self: end;
+    } */
+}
+
+/* Solução para o problema do nesting */
+
+#primary div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#primary div:nth-child(2) {
+    margin-inline: center;
+    margin-inline-start: 30%;
+}
+
+#primary div:nth-child(3) {
+    justify-self: end;
+}
+
+#secondary {
+    padding-block: 14px;
+    border: solid 1px var(--stroke-color);
+    border-inline: none;
+    justify-content: space-between;
+}
+
+@media (width <= 25.875em) {
+
+    #primary {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr; /* Divide o espaço em 3 partes iguais */
+        align-items: center; /* Centraliza verticalmente os itens */
+        padding-block: 16px;
+        width: 100%;
+        
+        /* Primeira div (esquerda) */
+        & div:nth-child(1) {
+            justify-self: start; /* Alinha à esquerda */
+        }
+          
+        /* Segunda div (centro) */
+        & div:nth-child(2) {
+            justify-self: center; /* Centraliza */
+            margin-inline: auto; /* Remove margens laterais extras */
+            /* width: auto; Largura automática (não 60%) */
+            max-width: 120px;
+        }
+          
+        /* Terceira div (direita) */
+        & div:nth-child(3) {
+            justify-self: end; /* Alinha à direita */
+        }
+          
+        /* Estilo dos ícones/texto (opcional) */
+        & img {
+            display: block; /* Remove espaços indesejados abaixo da imagem */
+        }
+    }
+      
+    
+
+    #secondary {
+        display: flex;          /* Ativa flexbox para alinhar os itens */
+        overflow-x: auto;       /* Habilita scroll horizontal */
+        -webkit-overflow-scrolling: touch;  /* Scroll suave em iOS */
+        gap: 32px;             /* Espaço entre os itens */
+        padding: 16px 0;       /* Espaçamento interno (vertical) */
+        margin: 0;             /* Remove margens padrão */
+        width: 100%;           /* Ocupa 100% da largura */
+        white-space: nowrap;    /* Impede quebra de linha dos itens */
+        
+        & a {
+          flex-shrink: 0;         /* Impede que os itens encolham */
+        }
+        
+        /* Opcional: Esconde a barra de scroll */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      
+
+}

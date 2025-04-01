@@ -1,0 +1,389 @@
+section header {
+    border-top: 1px solid var(--stroke-color);
+    padding-block: 12px 24px;
+    font: var(--text-span);
+
+
+    /* 
+    Não funcionou na minha máquina. tive que fazer como abaixo da sequencia comentada de forma separada. 
+
+    a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+        
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            width: 16px;
+            height: 16px;
+            
+        } */
+
+        &:hover span {
+            background-image: url(../assets/icons/ArrowRightHover.svg);
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+        }
+    /* }  */
+}
+
+header a {
+    justify-self: end;
+    align-items: center;
+    gap: 8px;
+}
+
+header span {
+    background-image: url(../assets/icons/ArrowRight.svg);
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+
+    
+} 
+
+/* 
+Exemplo da aula: no meu caso substitui pelo codigo abaixo pq não funciona com a versão do VS Code instalada
+
+#featured {
+    grid-area: featured;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+} */
+
+#featured {
+    grid-area: featured;
+}
+
+#featured img {
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.card {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        background: linear-gradient(180deg, transparent 0%, #020617 100%);
+        }
+
+    /* 
+    Não funcionou desse modo do exemplo por versão do VS Code instalada na máquina. Solução foi colocar fora do card como mostrado abaixo.
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+
+        padding: 24px;
+    } */
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+
+    padding: 24px;
+
+
+    &:has(.text-lg) {
+        padding: 12px;
+    }
+
+    /* 
+    Novamente a solução foi colocar fora do figcaption
+    
+    h2 {
+        margin-top: 8px;
+    } */
+}
+
+figcaption h2 {
+    margin-top: 8px;
+}
+
+#weekly {
+    grid-area: weekly;
+
+    &>div {
+        grid-template-columns: repeat(4, 292px);
+    }
+
+    img {
+        height: 160px;
+    }
+
+    /* 
+    Foi necessário fazer como foi feito após esse comentário.
+
+    figure {
+        position: relative;
+
+        .content-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+            font-weight: 800;
+        }
+
+    } */
+}
+
+#weekly figure {
+    position: relative;
+
+    .content-tag {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+}
+
+#weekly figure p {
+    margin-top: 8px;
+    font-weight: 800;
+}
+
+/* Não funcionou nessa versão. Resolução ficou como no codigo abaixo desse codigo comentado.  
+
+#ai {
+    grid-area: ai;
+
+    img {
+        width: 176px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-block: 8px 4px;
+    }
+}  */
+
+#ai {
+    grid-area: ai;
+}
+
+#ai img {
+    width: 176px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#ai h3 {
+    margin-block: 8px 4px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+/* Não funcionou nessa versão. Resolução ficou como no codigo abaixo desse codigo comentado.
+
+#more {
+    margin-top: 32px;
+
+    h3 {
+        margin-top: 8px;
+    img {
+        width: 72px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+} */
+
+#more {
+    margin-top: 32px;
+
+}
+
+#more h3 {
+    margin-top: 8px;
+}
+
+#more img {
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+@media (width <= 25.875em) {
+    & #featured {
+        grid-template-columns: 1fr !important;
+        grid-auto-flow: row !important;
+        gap: 24px;
+
+    }
+    
+    & #featured > div {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+    
+    /* Primeira imagem (destaque) */
+    & #featured > .card:first-child img {
+        width: 100%;
+        height: 414px !important;
+        object-fit: cover;
+    }
+    
+    /* Ajuste específico para o figcaption da primeira imagem */
+    & #featured > .card:first-child figcaption {
+        position:absolute;
+        width: 100%;
+        box-sizing: border-box;
+        bottom: 0;
+        padding: 24px;
+    }
+
+    /* Ajuste específico para o figcaption do primeiro card */
+    & #featured > .card:first-child figcaption h2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limita a 3 linhas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        max-height: 4.6em; /* Aproximadamente 3 linhas */
+        word-break: break-word; /* Quebra palavras longas */
+    }
+
+    /* Demais imagens do featured */
+    & #featured > div > .card img {
+        width: 100%;
+        height: 200px !important;
+        object-fit: cover;
+    }
+
+    & .card {
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 40%;
+            background: linear-gradient(180deg, transparent 0%, #020617 100%);
+        }
+
+        & figcaption {
+            position: absolute;
+            bottom: 0;
+            padding: 24px;
+        
+            &:has(.text-lg) {
+                padding: 12px;
+            }
+        
+            & h2 {
+                margin-top: 8px;
+            } 
+        }
+    }
+
+
+    & #weekly > div {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+
+    & #weekly figure {
+        margin-bottom: 16px;
+    }
+
+    & #weekly img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    
+    & #ai {
+        /* Container principal */
+        & article {
+            display: grid;
+            grid-template-columns: 90px 1fr; /* Coluna dupla */
+            gap: 16px;
+        }
+
+        /* Inverte a ordem dos elementos */
+        & article > div:first-child {
+            order: 1; /* Texto vai para baixo */
+        }
+
+        & article > div:last-child {
+            order: -1; /* Imagem vai para cima (esquerda) */
+        }
+
+        /* Estilo das imagens */
+        & img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        /* Mantém seus estilos de texto */
+        & h3, p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        & h3 {
+            -webkit-line-clamp: 2;
+            max-height: 3.6em;
+        }
+        
+        & p {
+            -webkit-line-clamp: 4;
+            max-height: 7.2em;
+        }
+    }
+
+    & #more {
+        padding-bottom: 40px;
+        
+        & article {
+            display: grid;
+            grid-template-columns: auto 1fr; /* Coluna dupla */
+            gap: 16px;
+        }
+
+        & h3 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            word-break: break-word;
+            -webkit-line-clamp: 2;
+            max-height: 3.6em;
+        }
+
+        & img {
+            width: 72px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+/*utility-first (conceito: classe que vai fazer apenas uma coisa)*/
+
+/* .desktop-only {
+    display: none;
+} */
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-32 {
+    gap:32px;
+}
+
+.text-2xl {
+    font: var(--h1);
+}
+.text-xl {
+    font: var(--h2);
+}
+.text-lg {
+    font: var(--h3);
+}
+.text-sm {
+    font: var(--text-sm);
+}
+
+@media (width <= 25.875em) {
+    .mobile-stack {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .mobile-full-width {
+        width: 100% !important;
+    }
+
+    .mobile-gap-24 {
+        gap: 24px !important;
+    }
+}
