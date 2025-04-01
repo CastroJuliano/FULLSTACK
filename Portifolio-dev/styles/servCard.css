@@ -1,0 +1,37 @@
+#servCard {
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+
+    margin-left: 50px;
+    
+    & .serv-card {
+        width: 280px;
+        height: 155px;
+        background-color: var(--base-color-gray-200);
+        border: 2px solid var(--base-color-gray-300);
+        border-radius: 1.5rem;
+
+        & img {
+        position: absolute;
+        padding: 27.5px 23px;
+        }
+         
+        #header {
+            position: absolute;
+            margin-top: 80px;
+            
+            & h3 {
+                position: relative;
+                padding: 0 20px;
+            }
+    
+            & p {
+                position: relative;
+                padding: 8px 20px 20px;
+            }
+        }
+    }
+}
+
+
