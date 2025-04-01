@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: "Open Sans", sans-serif;
+    line-height: 150%;
+    color: #333333;
+}
+
+body {
+    background-color: #F5F4F0;
+    background-size: cover;
+}
+
+#page {
+    box-sizing: border-box;
+    width: 1280px;
+}
+
+main {
+    width: 1120px;
+    margin: 88px auto 137px;
+}
+
+#title-page, #title-list {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    
+    color: #E1624F;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 22px;
+
+    margin: 20px 0 50px;
+    padding-bottom: 8px;
+    
+    color: #1B1B1B;
+}
+
+#description-img img {
+    width: 100%;
+    height: 660px;
+    border-radius: 28px;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    font-style: italic;
+    text-align: center;
+    color: #333333;
+
+    margin-top: 18px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    margin: 36px 0 64px;
+    
+    background-color: #d9d9d9;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 22px;
+    margin: 13px 0 19px;
+}
+
+#title-about {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 8px;
+    margin-bottom: 64px;
+}
+
+#content img{
+    width: 100%;
+    height: 350px;
+    border-radius: 28px;
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 22px;
+    font-weight: bold;
+    margin: 22px 0 10px;
+    padding-left: 32px;
+}
+
+#card-travel-1 p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 11px; 
+}
+
+#card-travel-1 ul {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    padding-left: 24px;
+    margin-bottom: 48px;
+    
+    list-style: disc;
+}
+
+#card-travel-2 p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 12px; 
+}
+
+#card-travel-2 ul {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    padding-left: 24px;
+    margin-bottom: 40px;
+    
+    list-style: disc;
+}
+
+ul li::marker {
+    color: #333333;
+}
+
+#description-final .divider {
+    margin: 40px 0;
+}
+
+#description-final p {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+
+    margin: 40px 0 65px;
+}
+
+footer {
+    text-align: center;
+    margin: 65px 0 48px;
+}
